@@ -153,8 +153,13 @@ export default class multiDrm extends Component {
                           'allowed_track_types' : "SD_UHD2",                 
                         }
                       ),
-                    //   'allow_mobile_abnormal_device' : false,
-                    //   'playready_security_level' : 150
+                        'security_policy' : [
+                            {
+                                'widevine': {
+                                    'override_device_revocation': true
+                                }
+                            }
+                        ]
                     }
                   );
                   
